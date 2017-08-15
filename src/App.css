@@ -1,0 +1,68 @@
+.App {
+  height: 100%;
+  background-color: #d0d0d0;
+}
+
+.App__title {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.Gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Gallery__image {
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 100ms;
+}
+
+.Gallery__image,
+.Modal__image {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.Gallery__image:hover {
+  transform: scale(1.05);
+}
+
+.Modal__backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Modal__image {
+  transform: scale(2);
+  animation: fade-in 1s;
+}
+
+.Modal__x {
+  position: absolute;
+  top: 60px;
+  right: 270px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
